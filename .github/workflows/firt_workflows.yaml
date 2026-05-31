@@ -11,4 +11,5 @@ jobs:
         run: |
           echo "Datetime: $(date +'%Y-%m-%d %H:%M:%S')"
       - name: "Repository name"
-        run: echo "Repository name: ${{ github.repository }}"
+        run: |
+          echo "Repository name: ${{ github.repository }}"
