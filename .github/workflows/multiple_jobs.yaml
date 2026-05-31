@@ -7,9 +7,15 @@ jobs:
     steps:
       - name: Echo "Frontend testing!"
         run: echo "frontend testing..."
-  
+    needs:
+      - backend-job
+
   backend-job:
     runs-on: ubuntu-latest
     steps:
       - name: Echo "Backend testing!"
         run: echo "backend testing..."
+
+    
+    
+    
