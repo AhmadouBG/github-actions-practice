@@ -1,0 +1,15 @@
+name: Multiple jobs
+on: push
+
+jobs:
+  frontend-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo "Frontend testing!"
+        run: echo "frontend testing..."
+  
+  backend-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo "Backend testing!"
+        run: echo "backend testing..."
