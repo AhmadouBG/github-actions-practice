@@ -1,0 +1,20 @@
+name: Runner
+on: workflow_dispatch
+
+jobs:
+  ubuntu-runner:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo "Running on ubuntu!"
+        run: echo "Running on ubuntu!"
+  macos-runner:
+    runs-on: macos-latest
+    steps:
+      - name: Echo "Running on macos!"
+        run: echo "Running on macos!"
+
+  windows-runner:
+    runs-on: windows-latest
+    steps:
+      - name: Echo "Running on windows!"
+        run: echo "Running on windows!"      
