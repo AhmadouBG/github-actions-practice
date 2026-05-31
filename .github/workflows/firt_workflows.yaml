@@ -8,6 +8,7 @@ jobs:
       - name: Echo "Hello, GitHub Actions!"
         run: echo "Hello, GitHub Actions!"
       - name: "Get current datetime"
-        run: echo "Datetime: $(date +'%Y-%m-%d %H:%M:%S')"
+        run: |
+          echo "Datetime: $(date +'%Y-%m-%d %H:%M:%S')"
       - name: "Repository name"
         run: echo "Repository name: ${{ github.repository }}"
