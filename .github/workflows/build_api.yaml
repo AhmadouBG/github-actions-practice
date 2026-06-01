@@ -1,0 +1,13 @@
+name: Build process API
+on: workflow_dispatch
+
+jobs: 
+  build-api:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check out
+        uses: actions/checkout@v6
+      - name: install dependencies
+        run: pip install -r requirements.txt
+      - name: build API
+        run: python -m py_compile app.py
