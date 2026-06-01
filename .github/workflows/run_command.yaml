@@ -15,4 +15,4 @@ jobs:
 
       - name: Run application
         run: python ./app.py
-        working-directory: ./github-actions-practice
+        working-directory: .
