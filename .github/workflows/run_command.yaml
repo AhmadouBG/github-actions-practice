@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo "Run command!"
-        run: python app.py
+        run: python ./app.py
