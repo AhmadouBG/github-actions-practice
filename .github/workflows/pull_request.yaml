@@ -1,0 +1,13 @@
+name: Pull request
+on: pull_request
+
+jobs:
+  pull_request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v6
+      - name: Echo "run test" 
+        run: pytest calcul.py
+      - name: Echo "run linting" 
+        run: ruff check .
