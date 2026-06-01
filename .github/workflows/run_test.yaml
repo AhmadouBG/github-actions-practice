@@ -1,0 +1,16 @@
+name: Running test
+on:
+  workflow_dispatch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v6
+      - name: python version
+        run: python --version
+      - name: pip version
+        run: pip --version
+      - name: run tests  
+        run: pytest calcul.py
