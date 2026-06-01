@@ -14,5 +14,5 @@ jobs:
       #     python-version: '3.13'
 
       - name: Run application
-        run: python ./app.py
-        working-directory: .
+        run: python app.py
+        working-directory: 
