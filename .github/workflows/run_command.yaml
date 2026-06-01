@@ -5,13 +5,14 @@ jobs:
   run-command:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v6
+      # - name: Check out repository code
+      #   uses: actions/checkout@v6
 
-      - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: '3.10'
+      # - name: Set up Python
+      #   uses: actions/setup-python@v6
+      #   with:
+      #     python-version: '3.13'
 
       - name: Run application
         run: python ./app.py
+        working-directory: ./github-actions-practice
