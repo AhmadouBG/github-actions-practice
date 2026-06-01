@@ -1,0 +1,14 @@
+name: Linting
+on:
+  workflow_dispatch
+
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v6
+      - name: install ruff
+        run: pip install ruff
+      - name: ruff check
+        run: ruff check .
