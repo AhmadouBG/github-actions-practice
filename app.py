@@ -1,0 +1,1 @@
+print("Github actions is fun!")

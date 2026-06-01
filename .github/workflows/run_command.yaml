@@ -1,0 +1,9 @@
+name: run command
+on: workflow_dispatch
+
+jobs:
+  run-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo "Run command!"
+        run: python app.py
