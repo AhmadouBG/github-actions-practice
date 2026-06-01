@@ -12,5 +12,7 @@ jobs:
         run: python --version
       - name: pip version
         run: pip --version
+      - name: install pytest
+        run: pip install pytest
       - name: run tests  
         run: pytest calcul.py
