@@ -1,0 +1,13 @@
+name: python environment
+on: workflow_dispatch
+
+jobs:
+  python-environment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/setup-python@v6
+      - name: Echo "Python version"
+        run: python --version
+      - name: Echo "Pip version"
+        run: pip --version
