@@ -1,0 +1,12 @@
+name: Git Context
+on: workflow_dispatch
+
+jobs:
+  git-context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: show git context
+        run: |
+          echo "${{ github.actor }}"
+          echo "${{ github.repository }}"
+          echo "${{ github.ref }}"
