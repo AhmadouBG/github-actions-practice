@@ -7,7 +7,9 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v6
-      - name: Echo "run test" 
+      - name: install dependencies 
+        run: pip install pytest ruff
+      - name: run test
         run: pytest calcul.py
-      - name: Echo "run linting" 
+      - name: run linting
         run: ruff check .
