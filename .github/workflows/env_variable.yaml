@@ -1,0 +1,11 @@
+name: environment variables
+on: workflow_dispatch
+
+jobs:
+  env-variables:
+    env:
+      APP_NAME: GitHub Actions
+    runs-on: ubuntu-latest
+    steps:
+      - name: show env variable
+        run: echo "$APP_NAME"
