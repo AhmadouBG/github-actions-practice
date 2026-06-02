@@ -29,3 +29,5 @@ jobs:
           name: my-artifact
       - name: showing report
         run: cat report.txt
+    needs: build
+    
