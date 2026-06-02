@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: show env variable
-        run: echo "${{APP_NAME}}"
+        run: echo "${{ env.APP_NAME }}"
