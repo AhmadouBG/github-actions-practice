@@ -1,0 +1,23 @@
+name: artifact
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: checkout
+        uses: actions/checkout@v6
+      - name: creating artifact
+        run: |
+          echo "report" > report.txt
+          echo "artifact created successfully" >> report.txt
+  download:
+    runs-on: ubuntu-latest
+    steps:
+      - name: downloading artifact
+        uses: actions/download-artifact@v6
+        with:
+          name: my-artifact
+      - name: showing report
+        run: cat report.txt
