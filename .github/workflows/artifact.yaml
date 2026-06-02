@@ -12,6 +12,14 @@ jobs:
         run: |
           echo "report" > report.txt
           echo "artifact created successfully" >> report.txt
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact
+          path: report.txt
+          retention-days: 1
+  
   download:
     runs-on: ubuntu-latest
     steps:
