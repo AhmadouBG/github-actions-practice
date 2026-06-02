@@ -10,6 +10,6 @@ jobs:
       - name: install dependencies 
         run: pip install pytest ruff
       - name: run test
-        run: pytest calcul.py
+        run: pytest calcul_test.py
       - name: run linting
         run: ruff check .
