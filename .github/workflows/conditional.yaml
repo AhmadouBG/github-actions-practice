@@ -1,0 +1,17 @@
+name: conditional execution
+on: workflow_dispatch
+
+jobs:
+  main_branch:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: main branch
+        run: echo "this job run only on main branch"
+
+  feature_api_branch:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/feature/api'
+    steps:
+      - name: feature api branch
+        run: echo "this job run only on feature/api branch"
