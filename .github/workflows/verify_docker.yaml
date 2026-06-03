@@ -1,0 +1,11 @@
+name: verify docker
+on: workflow_dispatch
+
+jobs:
+  verify-docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v6
+      - name: verify docker
+        run: docker build .
