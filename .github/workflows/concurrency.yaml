@@ -1,0 +1,15 @@
+name: concurrency
+on: workflow_dispatch
+
+jobs:
+  concurrency-job:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: deploy-main
+      cancel-in-progress: true
+    steps:
+      - name: Echo "Deploying..."
+        run: |
+          echo "Starting deployment of ${{ github.workflow }}"
+          sleep 100
+          echo "Deployment completed"
